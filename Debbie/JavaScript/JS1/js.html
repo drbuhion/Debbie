@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function changeImage()
+{
+element = document.getElementById("myimage");
+if (element.src.match("4vector"))
+  {
+  element.src = "http://sonnyholmes.typepad.com/.a/6a00e552250bc988340115713fcd8b970c-pi"
+  }
+else 
+  {
+  element.src = "http://4vector.com/i/free-vector-power-button-states-on-off-clip-art_117341_Power_Button_States_On_Off_clip_art_hight.png"
+  }
+}
+</script>
+
+<img id="myimage" onclick="changeImage()"
+src="http://4vector.com/i/free-vector-power-button-states-on-off-clip-art_117341_Power_Button_States_On_Off_clip_art_hight.png">
+
+<p>Click the button to turn on</p>
+
+</body>
+</html>
