@@ -1,0 +1,68 @@
+<!DOCTYPE>
+<html>
+<body>
+<h1> Food that Debbie eats </h1>
+
+<div id="hello"><button onclick="myFunction('T')">All</button> 
+<button onclick="myFunction('FAVORITE')">Favorite</button> </div>
+                 
+<div id="perso"></div>
+<input id="hii"></input><button onclick="change()">Favorite</button>
+
+</body>
+
+<script>
+function myFunction(choice) {
+document.getElementById("perso").innerHTML=getFavorites(choice);
+}
+
+function food(foodname,label)
+{
+this.foodname = foodname;
+this.label = label;
+this.changeLabel = changeLabel;
+  function changeLabel (newLabel) {
+    this.label=newLabel
+  }
+}
+
+foods = new Array();
+
+function change() {
+  var x=document.getElementById("hii").value;
+  for (var i=0; i<foods.length; i++) {
+    foods[i].label = x;
+  }
+
+  var favorites="<table border='1' width='300px'>";
+  for (var i=0;i<foods.length;i++) {
+      favorites += "<tr><td>" + foods[i].foodname +"</td><td>" 
+        +"</td><td>" + foods[i].label + "</td></tr>";
+  }
+  favorites += "</table>";
+  document.getElementById("perso").innerHTML = favorites;
+}
+
+function getFavorites(choice) {
+  var favorites="<table border='1' width='300px'>";
+  foods = new Array();
+  foods[0] = new food("Beef Steak","NOT");
+  foods[1] = new food("Beef Stew", "NOT");
+  foods[2] = new food("Lasagna", "FAVORITE");
+  foods[3] = new food("Tuna Pasta","FAVORITE");
+  foods[4] = new food("Doughnuts", "FAVORITE");
+
+  var patt1=new RegExp(choice);
+
+  for (var i=0;i<foods.length;i++) {
+    if(patt1.test(foods[i].label)){
+      favorites += "<tr><td>" + foods[i].foodname +"</td><td>" 
+        +"</td><td>" + foods[i].label + "</td></tr>";
+    }
+  }
+favorites += "</table>";
+  return favorites;
+}
+</script>
+
+</html>
