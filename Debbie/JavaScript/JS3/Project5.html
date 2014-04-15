@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Permutaion/Combination Calculator</title>
+</head>
+<body>
+
+n: <input type="number" id="N" name="n"><br>
+r: <input type="number" id="R" name="r"><br>
+<button type="button" onclick="getPermutation()">Permutation</button>
+<button type="button" onclick="getCombination()">Combination</button>
+
+
+</body>
+
+<script>
+function getPermutation() {
+var n=document.getElementById("N").value;
+var r=document.getElementById("R").value;
+
+var p=factorial(n)/factorial(n-r);
+alert(p);
+}
+
+function getCombination() {
+var n=document.getElementById("N").value;
+var r=document.getElementById("R").value;
+var p=factorial(n)/(factorial(r)*factorial(n-r));
+alert(p);
+}
+
+function factorial(n) {
+if (n <= 1) return 1;
+return n*factorial(n-1);
+} 
+
+</script>
+
+
+</html>
