@@ -1,0 +1,16 @@
+{
+  "summary": {
+    "title": "CSSECDV",
+    "owner": "Debbie"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "Quiz 2",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
+  }
+}
