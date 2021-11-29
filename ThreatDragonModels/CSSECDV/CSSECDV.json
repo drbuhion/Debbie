@@ -598,6 +598,11 @@
           "height": 590,
           "width": 4465
         }
+      },
+      {
+        "title": "Milestone 1",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 1
       }
     ]
   }
